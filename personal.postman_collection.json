@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "dba5f2b4-6556-4cea-b9b0-459870303af4",
+		"name": "User personal source",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8092/personal",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"personal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Henrry\",\r\n        \"lastName\": \"Avila\",\r\n        \"email\": \"henry122@gmail.com\",\r\n        \"number\": \"992708781\",\r\n        \"dni\": \"73938619\",\r\n        \"card\": \r\n            {\r\n                \"accountType\": \"AHORRO\",\r\n                \"balance\": 200,\r\n                \"currency\": \"SOLES\",\r\n                \"accountNumber\": \"1234123412342123\",\r\n                \"cvc\": 213\r\n            }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8092/personal/cardType/CREDITO",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"personal",
+						"cardType",
+						"CREDITO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Henrry\",\r\n    \"lastName\": \"Avila\",\r\n    \"email\": \"henry122@gmail.com\",\r\n    \"number\": \"992708781\",\r\n    \"dni\": \"73938661\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8092/personal/624f1263388e161f036be1dd",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"personal",
+						"624f1263388e161f036be1dd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8092/personal/624f0bcf01dbff2675ece70e",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"personal",
+						"624f0bcf01dbff2675ece70e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8092/personal/624f21a7c42ee33f11ddb4d5",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"personal",
+						"624f21a7c42ee33f11ddb4d5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

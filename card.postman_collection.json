@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "25a2d693-c27c-4ae3-b91f-a568ede93af4",
+		"name": "Card source",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8022/card",
+					"host": [
+						"localhost"
+					],
+					"port": "8022",
+					"path": [
+						"card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountType\": \"AHORRO\",\r\n    \"balance\": 200,\r\n    \"currency\": \"SOLES\",\r\n    \"accountNumber\": \"1234123412342123\",\r\n    \"cvc\": 213,\r\n    \"dni\": \"73938616\",\r\n    \"cardType\": \"DEBITO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8022/card",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8022",
+					"path": [
+						"card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n    \"accountType\": \"AHORRO\",\r\n    \"balance\": 200,\r\n    \"currency\": \"SOLES\",\r\n    \"accountNumber\": \"1234123412342123\",\r\n    \"cvc\": 213,\r\n    \"dni\": \"73938616\",\r\n    \"cardType\": \"DEBITO\"\r\n    },\r\n    {\r\n    \"accountType\": \"AHORRO\",\r\n    \"balance\": 200,\r\n    \"currency\": \"SOLES\",\r\n    \"accountNumber\": \"1234123412342123\",\r\n    \"cvc\": 213,\r\n    \"dni\": \"73938616\",\r\n    \"cardType\": \"DEBITO\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8022/card/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8022",
+					"path": [
+						"card",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"accountType\": \"AHORRO\",\r\n        \"balance\": 500,\r\n        \"currency\": \"SOLES\",\r\n        \"accountNumber\": \"1234123412341234\",\r\n        \"cvc\": 123\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8022/card/624f5d16e986663aa1992127",
+					"host": [
+						"localhost"
+					],
+					"port": "8022",
+					"path": [
+						"card",
+						"624f5d16e986663aa1992127"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByDniAndType",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8022/card/dni/13238719/type/CREDITO",
+					"host": [
+						"localhost"
+					],
+					"port": "8022",
+					"path": [
+						"card",
+						"dni",
+						"13238719",
+						"type",
+						"CREDITO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8022/card/624f612bf192147d6cc10b51",
+					"host": [
+						"localhost"
+					],
+					"port": "8022",
+					"path": [
+						"card",
+						"624f612bf192147d6cc10b51"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

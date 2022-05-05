@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "43030358-5359-414e-b209-186debd898a3",
+		"name": "User enterprise source",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8092/enterprise",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"enterprise"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Henrry\",\r\n        \"lastName\": \"Avila\",\r\n        \"email\": \"henry122@gmail.com\",\r\n        \"number\": \"992708781\",\r\n        \"dni\": \"13233719\",\r\n        \"ruc\": \"12345678912\",\r\n        \"cards\": [\r\n            {\r\n                \"balance\": 900,\r\n                \"currency\": \"SOLES\",\r\n                \"accountNumber\": \"1234123412342123\",\r\n                \"cvc\": 786\r\n            },\r\n            {\r\n                \"balance\": 900,\r\n                \"currency\": \"SOLES\",\r\n                \"accountNumber\": \"2234123412342123\",\r\n                \"cvc\": 786\r\n            }\r\n        ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8092/enterprise/cardType/DEBITO",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"enterprise",
+						"cardType",
+						"DEBITO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Henrry\",\r\n    \"lastName\": \"Avila\",\r\n    \"email\": \"henry122@gmail.com\",\r\n    \"number\": \"992708781\",\r\n    \"dni\": \"73938661\",\r\n    \"ruc\": \"12345678912\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8092/enterprise/624f252e995453578b39901b",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"enterprise",
+						"624f252e995453578b39901b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8092/enterprise/624f252e995453578b39901b",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"enterprise",
+						"624f252e995453578b39901b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8092/enterprise/624f25d42c0814347e4c6b44",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"enterprise",
+						"624f25d42c0814347e4c6b44"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
